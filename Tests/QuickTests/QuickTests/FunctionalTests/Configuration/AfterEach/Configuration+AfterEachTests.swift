@@ -8,7 +8,7 @@ class Configuration_AfterEachSpec: QuickSpec {
             FunctionalTests_Configuration_AfterEachWasExecuted = false
         }
         it("is executed before the configuration afterEach") {
-            expect(FunctionalTests_Configuration_AfterEachWasExecuted).to(beFalsy())
+            XCTAssertFalse(FunctionalTests_Configuration_AfterEachWasExecuted)
         }
     }
 }

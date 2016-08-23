@@ -15,7 +15,7 @@ class FunctionalTests_BeforeSuite_BeforeSuiteSpec: QuickSpec {
 class FunctionalTests_BeforeSuite_Spec: QuickSpec {
     override func spec() {
         it("is executed after beforeSuite") {
-            expect(beforeSuiteWasExecuted).to(beTruthy())
+            XCTAssertTrue(beforeSuiteWasExecuted)
         }
     }
 }

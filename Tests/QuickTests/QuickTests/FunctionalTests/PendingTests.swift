@@ -8,7 +8,7 @@ var onlyPendingExamplesBeforeEachExecutedCount = 0
 class FunctionalTests_PendingSpec: QuickSpec {
     override func spec() {
         xit("an example that will not run") {
-            expect(true).to(beFalsy())
+            XCTAssertFalse(true)
         }
 
         describe("a describe block containing only one enabled example") {

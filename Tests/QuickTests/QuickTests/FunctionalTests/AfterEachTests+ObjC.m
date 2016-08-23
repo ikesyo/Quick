@@ -22,7 +22,7 @@ afterEach(^{ [afterEachOrder addObject:@(OuterTwo)]; });
 afterEach(^{ [afterEachOrder addObject:@(OuterThree)]; });
 
 it(@"executes the outer afterEach closures once, but not before this closure [1]", ^{
-    expect(afterEachOrder).to(equal(@[]));
+    XCTAssertEqualObjects(afterEachOrder, @[]);
 });
 
 it(@"executes the outer afterEach closures a second time, but not before this closure [2]", ^{

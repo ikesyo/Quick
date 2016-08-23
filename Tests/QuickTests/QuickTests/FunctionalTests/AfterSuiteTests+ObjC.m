@@ -17,7 +17,7 @@ QuickSpecEnd
 QuickSpecBegin(FunctionalTests_AfterSuite_Spec_ObjC)
 
 it(@"is executed before afterSuite", ^{
-    expect(@(afterSuiteWasExecuted)).to(beFalsy());
+    XCTAssertFalse(afterSuiteWasExecuted);
 });
 
 QuickSpecEnd

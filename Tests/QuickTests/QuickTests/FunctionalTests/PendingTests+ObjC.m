@@ -10,7 +10,7 @@ static NSUInteger onlyPendingExamplesBeforeEachExecutedCount = 0;
 QuickSpecBegin(FunctionalTests_PendingSpec_ObjC)
 
 pending(@"an example that will not run", ^{
-    expect(@YES).to(beFalsy());
+    XCTAssertFalse(YES);
 });
 
 describe(@"a describe block containing only one enabled example", ^{

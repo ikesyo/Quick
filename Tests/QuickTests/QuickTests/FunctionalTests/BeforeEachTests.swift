@@ -41,8 +41,8 @@ class FunctionalTests_BeforeEachSpec: QuickSpec {
                 expect {
                     beforeEach { }
                     }.to(raiseException { (exception: NSException) in
-                        expect(exception.name).to(equal(NSExceptionName.internalInconsistencyException))
-                        expect(exception.reason).to(equal("'beforeEach' cannot be used inside 'it', 'beforeEach' may only be used inside 'context' or 'describe'. "))
+                        XCTAssertEqual(exception.name, NSExceptionName.internalInconsistencyException)
+                        XCTAssertEqual(exception.reason, "'beforeEach' cannot be used inside 'it', 'beforeEach' may only be used inside 'context' or 'describe'. ")
                         })
             }
         }

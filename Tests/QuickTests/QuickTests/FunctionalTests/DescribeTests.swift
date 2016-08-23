@@ -23,8 +23,8 @@ class QuickDescribeTests: QuickSpec {
                 expect {
                     describe("A nested describe that should throw") { }
                 }.to(raiseException { (exception: NSException) in
-                    expect(exception.name).to(equal(NSExceptionName.internalInconsistencyException))
-                    expect(exception.reason).to(equal("'describe' cannot be used inside 'it', 'describe' may only be used inside 'context' or 'describe'. "))
+                    XCTAssertEqual(exception.name, NSExceptionName.internalInconsistencyException)
+                    XCTAssertEqual(exception.reason, "'describe' cannot be used inside 'it', 'describe' may only be used inside 'context' or 'describe'. ")
                 })
             }
         }

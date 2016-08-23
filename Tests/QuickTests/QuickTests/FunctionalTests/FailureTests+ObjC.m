@@ -13,15 +13,15 @@ QuickSpecBegin(FunctionalTests_FailureSpec_ObjC)
 
 describe(@"a group of failing examples", ^{
     it(@"passes", ^{
-        expect(@YES).to(beTruthy());
+        XCTAssertTrue(YES);
     });
 
     it(@"fails (but only when running the functional tests)", ^{
-        expect(@(isRunningFunctionalTests)).to(beFalsy());
+        XCTAssertFalse(isRunningFunctionalTests);
     });
 
     it(@"fails again (but only when running the functional tests)", ^{
-        expect(@(isRunningFunctionalTests)).to(beFalsy());
+        XCTAssertFalse(isRunningFunctionalTests);
     });
 });
 

@@ -5,7 +5,7 @@ import Nimble
 class Configuration_BeforeEachSpec: QuickSpec {
     override func spec() {
         it("is executed after the configuration beforeEach") {
-            expect(FunctionalTests_Configuration_BeforeEachWasExecuted).to(beTruthy())
+            XCTAssertTrue(FunctionalTests_Configuration_BeforeEachWasExecuted)
         }
     }
 }

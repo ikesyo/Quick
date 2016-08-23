@@ -31,7 +31,7 @@ sharedExamples(@"gets called with a different context from within the same spec 
     it(@"tracks correctly", ^{
         NSString *payload = exampleContext()[@"payload"];
         BOOL expected = [payload isEqualToString:[NSString stringWithFormat:@"%ld", (long)counter]];
-        expect(@(expected)).to(beTrue());
+        XCTAssertTrue(expected);
     });
     
 });
